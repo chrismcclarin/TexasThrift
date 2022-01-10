@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="/<%=store._id%>?_method=PUT" method="POST">
+        Image URL: <input type="text" name="image_url" />
+        Descritpion: <input type="text" name="description" />
+        Title: <input type="text" name="title" />
+        Sizes: <input type="text" name="sizes" />
+        Price: <input type="text" name="price" />
+        <input type="submit" value="Submit Changes" />
+    </form>
 </body>
 </html>
