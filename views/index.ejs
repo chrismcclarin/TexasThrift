@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <%- include('./partials/header') %>
     <ul>
         <%- store.map(store => 
         `<a href="/${store._id}"><li>${store.title}</li></a>
