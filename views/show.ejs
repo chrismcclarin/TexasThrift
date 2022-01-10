@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p>Name: <%= store.title %> </p>
+    <p>Description: <%= store.description %> </p>
+    <img>Image: <img src='<%= store.image_url %>' />' </p>
+    <p>Price: $<%= store.price %> </p>
+    <form action="/<%=store._id%>/buy?_method=PUT" method="POST">
+        <input type="submit" value="BUY" />
+    </form>
+    <input type="button" onclick="location.href='/'" value="back" />
 </body>
 </html>
