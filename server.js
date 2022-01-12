@@ -26,7 +26,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(methodOverride("_method"))
-app.use('/public/', express.static('public'));
+app.use('/Public', express.static('Public'));
 app.use(expressSession({
     secret: SECRET,
     resave: false,
