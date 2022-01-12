@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/<%=store._id%>?_method=PUT" method="POST">
-        Image URL: <input type="text" name="image_url" />
-        Descritpion: <input type="text" name="description" />
-        Title: <input type="text" name="title" />
-        Sizes: <input type="text" name="sizes" />
-        Price: <input type="text" name="price" />
+    <form action="/" method="POST">
+        Image URL: <input type="text" name="image_url" size="50" /><br>
+        Descritpion: <br><textarea type="text" name="description" cols='50' rows='10'></textarea><br>
+        Title: <input type="text" name="title" size="50" /><br>
+        Sizes: <input type="text" name="sizes" size="10" /><br>
+        Price: <input type="text" name="price" size="5" /><br>
         <input type="submit" value="Submit Changes" />
     </form>
 </body>

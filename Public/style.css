@@ -1,6 +1,65 @@
 .topNavBar {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: flex-end;
     justify-content: space-between;
-    width: 100
+    width: 100vw;
+    background-color: #6A4B35;
+    margin: -10px 0px 
+}
+.showImg {
+    width: 500px;
+    height: 500px;
+}
+.showContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: beige;
+
+}
+body {
+    background-color:   #35546A;
+}
+.showIndex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 0 px -50px;
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 250px;
+    align-items: flex-start;
+    justify-content: left;
+}
+.deleteBut {
+    padding: 0px;
+}
+.editBut {
+    padding: 0px;
+    margin: -40px 0px 0px 0px;
+    align-self: flex-end;
+}
+#showFont {
+    font-size: 11;
+    color: orange;
+    padding: 0px;
+    border-color: black;
+    border: 10px;
+    margin: 0px;
+}
+a {text-decoration: none}
+#storeName, #storeName:visited  {
+    font-size: 100px;
+
+    color:white;
 }

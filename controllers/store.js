@@ -20,8 +20,17 @@ storeRouter.put('/:id/buy', (req, res) => {
     });
 }); 
 
-// Index
+//Homepage
 storeRouter.get("/", (req, res) => {
+    Store.find({}, (err, store) => {
+        res.render("home", {
+            store
+        })
+    })
+})
+
+// Index
+storeRouter.get("/browse", (req, res) => {
     Store.find({}, (err, store) => {
         res.render("index", {
             store
@@ -37,7 +46,7 @@ storeRouter.get('/new', (req, res) => {
 // Delete
 storeRouter.delete("/:id", (req, res) => {
     Store.findByIdAndRemove(req.params.id, (err, data) => {
-        res.redirect("/")
+        res.redirect("/browse")
     })
 })
 

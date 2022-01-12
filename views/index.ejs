@@ -9,15 +9,17 @@
 </head>
 <body>
     <%- include('./partials/header') %>
-    <ul>
-        <%- store.map(store => 
-        `<a href="/${store._id}"><li>${store.title}</li></a>
-        <form action="/${store._id}?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE" />
+    <ul class="showIndex">
+        <%- store.map(store => `
+        <li><p id="showFont"> ${store.title}</p>
+        <a href="/${store._id}"><img src = "${store.image_url}" width="150px" height="150px"/></a>
+        <form class="deleteBut" action="/${store._id}?_method=DELETE" method="POST">
+            <input class="deleteBut"  type="submit" value="DELETE" />
         </form>
-        <a href="/${store._id}/edit">Edit</a>
+        <form class="editBut" action="/${store._id}/edit">
+            <input class="editBut" type="submit" value="EDIT" />
+        </form></li>
         `).join('') %>
     </ul>
-    <a href="/new">New item</a>
 </body>
 </html>

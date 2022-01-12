@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,19 @@
     <link rel="stylesheet" href="/public/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Name: <%= store.title %> </p>
-    <p>Description: <%= store.description %> </p>
-    <img>Image: <img src='<%= store.image_url %>' />' </p>
+    <%- include('./partials/header') %>
+    <p><%= store.title %></p>
     <p>Price: $<%= store.price %> </p>
+    <div class='showContainer'>
+        <img class="showImg" src='<%= store.image_url %>' />
+        <p><%= store.description %> </p>
+    </div>
     <form action="/<%=store._id%>/buy?_method=PUT" method="POST">
         <input type="submit" value="BUY" />
     </form>
     <input type="button" onclick="location.href='/'" value="back" />
 </body>
+
 </html>
