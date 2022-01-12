@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const StoreSchema = new Schema ({
     image_url: String,
     description: String,
-    title: { type: String, required: true},
+    title: String, 
     sizes: String,
     price: Number,
 }, {timestamps: true});
