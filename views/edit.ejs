@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/<%= store._id %>?_method=POST" method="POST">
+    <form action="/<%= store._id %>?_method=PUT" method="POST">
         Image URL: <input type="text" name="image_url" value="<%= store.image_url %>" size="50" /><br>
         Descritpion: <br><textarea type="text" name="description" cols='50' rows='10'><%= store.description %></textarea> /><br>
         Title: <input type="text" name="title" value="<%= store.title %>" size="50"/><br>

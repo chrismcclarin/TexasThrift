@@ -8,6 +8,14 @@
     <title>Document</title>
 </head>
 <body>
+    <%- include('./partials/header') %>
+    <h3>Please Sign Up</h3>
     
+    <form action="/signup" method="POST" >
+        <input type="email" name="email"><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Sign Up">
+    </form>
+
 </body>
 </html>

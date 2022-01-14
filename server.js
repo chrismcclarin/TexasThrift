@@ -4,10 +4,12 @@ const app = express();
 const mongoose = require('mongoose');
 const Store = require('./models/product');
 const methodOverride = require("method-override")
-const storeController = require('./controllers/store')
-const usersController = require('./controllers/users');
 const expressSession = require('express-session')
+const auth = require('./middleware/auth');
 require('dotenv').config();
+
+const usersController = require('./controllers/users');
+const storeController = require('./controllers/store');
 
 // Database connection
 const { PORT=3000, DATABASE_URL, SECRET } = process.env
@@ -32,11 +34,12 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: false
 }))
+app.use(auth.handleLoggedInUser);
 
 
 // Routes / Controllers
-app.use('/', storeController)
 app.use('/', usersController)
+app.use('/', storeController)
 
 
 //listeners

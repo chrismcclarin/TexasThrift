@@ -1,10 +1,22 @@
 .topNavBar {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: flex-start;
     justify-content: space-between;
     width: 100vw;
+    height: 200px;
     background-color: #6A4B35;
+    margin: -10px 0px;
+}
+.navTitle {
+    font-size: 100px;
+    color:white;
+    display:flex;
+    align-items: center;
+    width:85vw;
+    height: 150px;
     margin: -10px 0px;
 }
 .showImg {
@@ -16,7 +28,6 @@
     flex-direction: row;
     width: 100vw;
     justify-content: space-between;
-    background-color: beige;
 
 }
 body {
@@ -36,8 +47,8 @@ li {
     padding: 0px 10px;
     display: flex;
     flex-direction: column;
-    width: 150px;
-    height: 250px;
+    width: 250px;
+    height: 350px;
     align-items: flex-start;
     justify-content: left;
 }
@@ -58,3 +69,10 @@ li {
     margin: 0px;
 }
 a {text-decoration: none;}
+a:visited {
+    color:white;
+}
+#showName {
+    font-size: 25px;
+    color: orange;
+}

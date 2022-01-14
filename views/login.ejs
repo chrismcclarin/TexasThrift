@@ -8,6 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <%- include('./partials/header') %>
+    <h3>Please Login</h3>
+
+    <% if(error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+    <form action="/login" method="post">
+        <input type="email" name="email"><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
 </body>
 </html>

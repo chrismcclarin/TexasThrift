@@ -1,9 +1,16 @@
 <nav class='topNavBar'>
-    <a href="/">
-    <img src="https://www.wildtexasthrifts.com/uploads/b/f29043102618496be3ea45d22fc52a1c95e9ec52317af5a9a750757103ab21f0/2020-08-31_13-16-19_1598897786.png" width="175" height="150"/>
-    <span id="storeName">Wild Texas Thrifts </span></a>
+    <div class='navTitle'><a href="/">
+    <img src="https://www.wildtexasthrifts.com/uploads/b/f29043102618496be3ea45d22fc52a1c95e9ec52317af5a9a750757103ab21f0/2020-08-31_13-16-19_1598897786.png" width="175" height="150"/></a>
+    <span><a href="/">Wild Texas Thrifts</a></span></div>
     <a href="/browse">Shop All</a>
+    <% if(user) { %>
+        <a href="/logout">Logout</a>
+        <% if(user.isAdmin) { %>
+            <a href="/admin">Go to Admin Page</a>
+            <a href="/new">New item</a>
+        <% } %>
+    <% } else { %>
     <a href="/login">Login</a>
     <a href="/signup">Sign Up</a>
+    <% } %>
 </nav>
-<a href="/new">New item</a>

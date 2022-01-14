@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +7,19 @@
     <link rel="stylesheet" href="/Public/style.css">
     <title>Document</title>
 </head>
-
 <body>
     <%- include('./partials/header') %>
     <ul class="showIndex">
         <%- store.map(store => `
         <li>
         <a href="/${store._id}"><p id="showFont"> ${store.title}</p><img src = "${store.image_url}" width="250px" height="250px"/></a>
-        </li>`
-        ).join('') %>
+        <form class="deleteBut" action="/${store._id}?_method=DELETE" method="POST">
+            <input class="deleteBut"  type="submit" value="DELETE" />
+        </form>
+        <form class="editBut" action="/${store._id}/edit">
+            <input class="editBut" type="submit" value="EDIT" />
+        </form></li>
+        `).join('') %>
     </ul>
 </body>
-
 </html>

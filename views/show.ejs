@@ -11,10 +11,10 @@
 
 <body>
     <%- include('./partials/header') %>
-    <p>title: <%= store.title %></p>
-    <p>Price: $<%= store.price %> </p>
+    <p id="showName"><%= store.title %></p>
     <div class='showContainer'>
         <img class="showImg" src='<%= store.image_url %>' />
+        <p>Price: $<%= store.price %> </p>
         <p><%= store.description %> </p>
     </div>
     <form action="/<%=store._id%>/buy?_method=PUT" method="POST">

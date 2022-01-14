@@ -1,7 +1,8 @@
 const express = require('express');
 const storeRouter = express.Router();
-const Store = require('../models/product')
+const Store = require('../models/product');
 const Seed = require('../models/seed.js');
+const auth = require('../middleware/auth');
 
 // Seed
 storeRouter.get('/seed', (req, res) => {
@@ -12,18 +13,20 @@ storeRouter.get('/seed', (req, res) => {
     });
 });
 
-//buy
-storeRouter.put('/:id/buy', (req, res) => {
-    Store.updateOne({_id: req.params.id}, {$inc:{'qty' : -1}}, 
-    (error, store) => {
-        res.redirect(`/${req.params.id}`)
-    });
-}); 
-
 //Homepage
 storeRouter.get("/", (req, res) => {
     Store.find({}, (err, store) => {
         res.render("home", {
+            store
+        })
+    })
+})
+
+// Admin
+storeRouter.get("/admin", auth.isAuthenticated, (req, res) => {
+    if(!req.user.isAdmin) return res.redirect('/home');
+    Store.find({}, (err, store) => {
+        res.render("admin", {
             store
         })
     })
