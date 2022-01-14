@@ -5,7 +5,8 @@ Technologies used:
 Javascript
 NodeJS
 CSS
-MongoDB
+MongoDB!
+
 Mongoose
 ExpressJS
 HTML5
@@ -17,8 +18,9 @@ Also visit https://www.wildtexasthrifts.com/
 
 
 Screenshot:
-
-
+![Screen Shot 2022-01-14 at 8 07 27 AM](https://user-images.githubusercontent.com/95185347/149530653-dcd84a0f-b1c7-4892-812e-d53c2c3dffd5.png)
+![Screen Shot 2022-01-14 at 8 07 45 AM](https://user-images.githubusercontent.com/95185347/149530669-e5404371-0cca-444d-a195-ede9cb1fd051.png)
+![Screen Shot 2022-01-14 at 8 08 01 AM](https://user-images.githubusercontent.com/95185347/149530723-e57048ac-9b3f-44bb-bbfd-7492bc962cef.png)
 
 Next Steps:
 A search function
