@@ -14,6 +14,7 @@ HTML5
 Getting Started: 
 https://texasthrift.herokuapp.com/
 Use the nav bar at the top and you can sign in as a user.
+
 This is my personal project to build a site for a friend, She currently has a website hosted here: https://www.wildtexasthrifts.com/
 
 
